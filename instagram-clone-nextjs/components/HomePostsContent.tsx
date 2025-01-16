@@ -38,7 +38,7 @@ export default function HomePostsContent({
   }
 
   function handleScroll() {
-    debounce(300);
+    debounce(200);
   }
 
   let timer: NodeJS.Timeout;
@@ -72,9 +72,14 @@ export default function HomePostsContent({
       {" "}
       {allPosts.length > 0 ? (
         allPosts.map((post) => {
+
           const profile = profiles.find((f) => {
             return post.author === f?.email;
           });
+
+          const postLikesCount = posts.find((f) => {
+            return post.id === f?.id;
+          })!; 
 
           return (
             <div
@@ -101,7 +106,7 @@ export default function HomePostsContent({
 
               <section className="flex justify-between border-t-2 border-neutral-700 pt-4">
                 <LikesInfo
-                  post={post}
+                  post={postLikesCount}
                   sessionLike={
                     myLikes.find((like) => {
                       return like.postId === post.id;
