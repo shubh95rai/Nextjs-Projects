@@ -1,6 +1,7 @@
 "use client";
 
 import { createPostAction } from "@/actions/actions";
+import TopNav from "@/components/TopNav";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
@@ -45,7 +46,8 @@ export default function CreatePage() {
 
   return (
     <div className="mx-auto max-w-md">
-      <h1 className="text-center text-2xl font-bold">Create Post</h1>
+      {/* <h1 className="text-center text-2xl font-bold">Create Post</h1> */}
+      <TopNav>Create Post</TopNav>
       <form action={createPostAction} className="mt-8 flex flex-col gap-2">
         <div className="relative flex aspect-square size-full items-center justify-center rounded-md bg-gray-200 p-4 dark:bg-neutral-700">
           {imageUrl ? (
