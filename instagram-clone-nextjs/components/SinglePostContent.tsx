@@ -6,6 +6,7 @@ import Description from "@/components/Description";
 import LikesInfo from "@/components/LikesInfo";
 import { prisma } from "@/utils/prismaClient";
 import Image from "next/image";
+import TopNav from "./TopNav";
 
 export default async function SinglePostContent({
   postId,
@@ -55,8 +56,9 @@ export default async function SinglePostContent({
   const sessionEmail = await getSessionEmail();
 
   return (
-    <main className="mx-auto max-w-lg rounded-md p-4 pb-10 md:max-w-5xl">
-      <div className="grid items-start gap-4 md:grid-cols-2">
+    <main className="mx-auto max-w-md rounded-md pb-10 md:max-w-4xl">
+      <TopNav>Post</TopNav>
+      <div className="mt-8 grid items-start gap-4 md:grid-cols-2">
         <section className="flex flex-col justify-between rounded-md bg-gray-100 p-4 shadow dark:bg-neutral-800">
           <div className="my-auto flex aspect-square size-full items-center">
             <Image

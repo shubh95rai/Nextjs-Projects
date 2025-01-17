@@ -37,7 +37,7 @@ export default function RootLayout({
           {modal}
           <div className="flex">
             <DesktopNav />
-            <div className="w-full px-4 py-6">{children}</div>
+            <div className="w-full p-4">{children}</div>
           </div>
           <MobileNav />
         </ThemeProvider>
