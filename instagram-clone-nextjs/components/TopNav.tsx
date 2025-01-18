@@ -13,7 +13,7 @@ export default function TopNav({
   return (
     <div className="relative flex h-10 items-center justify-between text-2xl">
       <BackButton />
-      <div className="absolute left-1/2 flex -translate-x-1/2 items-center gap-1 font-bold">
+      <div className="absolute left-1/2 flex -translate-x-1/2 items-center gap-1 text-xl font-bold md:text-2xl">
         {children}
       </div>
       {isMyProfile && (

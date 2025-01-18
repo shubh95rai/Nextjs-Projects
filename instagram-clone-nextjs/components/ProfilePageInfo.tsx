@@ -16,7 +16,7 @@ export default function ProfilePageInfo({
   return (
     <div>
       <TopNav isMyProfile={isMyProfile}>
-        {profile.name}
+        {profile.username}
         <RiVerifiedBadgeFill className="text-sky-600" />
       </TopNav>
       <section className="mt-8 flex justify-center">

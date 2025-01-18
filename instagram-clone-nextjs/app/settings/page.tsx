@@ -23,11 +23,13 @@ export default async function SettingPage() {
       <section className="relative flex h-10 items-center justify-between text-2xl">
         <BackButton />
         <div className="absolute left-1/2 -translate-x-1/2 text-center">
-          <h1 className="font-bold">Profile Settings</h1>
-          <p className="mt-1 text-sm text-gray-500">{email}</p>
+          <h1 className="mt-2 text-xl font-bold md:text-2xl">
+            Profile Settings
+          </h1>
+          <p className="mt-1 text-xs text-neutral-500 md:text-sm">{email}</p>
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex gap-1">
           {/* <ThemeToggle /> */}
           <ModeToggle />
           <form action={signOutAction}>
