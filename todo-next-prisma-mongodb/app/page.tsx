@@ -6,7 +6,7 @@ export default async function Home() {
   const todos = await getTodosAction();
   // console.log(todos);
   return (
-    <main className="flex flex-col items-center gap-5 py-20">
+    <main className="flex flex-col items-center gap-5 py-20 px-2">
       <h1 className="text-3xl font-extrabold uppercase">
         Todo
         <span className="ml-2 text-orange-700">App</span>
